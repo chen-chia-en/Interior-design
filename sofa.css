@@ -1,0 +1,420 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    width: 100vw;
+    height:300vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #01262e
+  ;
+}
+.landing-page{
+
+    position: relative;
+    top:-10px;
+    left:0;
+    width:100%;
+    height:114vh;
+    background-image: url('landing page.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 999;
+}
+#explore{
+  border:none;
+  box-shadow: 0px 0px 50px #01333f;
+  width: 140px;
+  height: 45px;
+  position: absolute;
+  background-color: #01262e;
+  top:61%;
+  left: 38px;
+ border-radius: 50px;
+ cursor: pointer;
+}
+#explore img{
+  width:100px;
+  text-shadow:5px 5px 30px teal;
+}
+.shop{
+  font-size: 40px;
+  color:white;
+  position: absolute;
+  cursor: pointer;
+  opacity: 1;
+  z-index: 1;
+  width: 40px;
+  height:40px;
+  animation: stay 2.5 infinite;
+}
+/* 為什麼必須是::after? 若::before 原本的shop 會受before的動畫影響 */
+.shop::after{
+  top:0;
+  left:0;
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 40px;
+  height:40px;
+  border-radius: 50%;
+
+  animation: round 2s infinite 0s ;
+  opacity: 1;
+  z-index: -1;
+}
+  @keyframes round{
+ 
+    100%{
+      opacity: 0;
+      transform: scale(2.5);
+    }
+  }
+
+#shop1{
+  right:180px;
+  top:300px;
+}
+#shop1::after{
+  animation: round 2s infinite 0.5s ;
+}
+#shop2{
+  right:50%;
+  top:350px;
+  }
+#shop2::after{
+  animation: round 2s infinite 1s ;
+  }
+#shop3{
+    right:25%;
+  top:620px;
+  }
+.paper-wrapper{
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  width:500px;
+  height:200px;
+  background: white;
+  color:#01262e;
+  font-size: 18px;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+
+  opacity: 0;
+  transition: 0.5s;
+  border-radius: 10px;
+  visibility: hidden;
+}
+.paper{
+  position: absolute;
+  margin: 50px;
+}
+.paper h1{
+  position: relative;
+  top:-5px;
+  font-size: 25px;
+}
+.close{
+  font-size:25px;
+  position: absolute;
+  top: 15px;;
+  right: 20px;
+  cursor: pointer;
+  z-index: 99999;
+}
+/*customer rating  */
+.customer {
+  top:-10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.customer img{
+  width:100vw;
+  position: relative;
+  object-fit: contain;
+  object-position: center;
+}
+.slide{
+   top:135px;
+    width: 800px;
+    height:160px;
+    position: absolute;
+background-color: transparent;
+border-radius: 20px;
+
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.swiper-slide {
+
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+.swiper-button-next, .swiper-button-prev{
+  color:rgb(0, 53, 53);
+  transform: scale(0.7);
+  font-weight: bold;
+ 
+}
+
+/* slide 2 */
+
+.slide2{
+    top:290px;
+    width: 100%;
+    height:90vh;
+    position: relative;
+    z-index: 9999;
+}
+.swiper-container2 {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide2 {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide2 img {
+  display: block;
+  width: 100vw;
+  height: 105vh;
+  object-fit: cover;
+  position: absolute;
+  object-position: top;
+  opacity: 0;
+}
+.swiper-slide2.active img {
+  opacity: 1;
+  transition: .5s ease;
+}
+
+
+#next, #prev{
+  width:80px;
+  position: absolute;
+  bottom:228px;
+  left: 642px;
+  cursor: pointer;
+}
+#prev{
+  left:562px;
+}
+
+/* footer */
+.footer{
+  top:100px;
+  position: relative;
+  width: 100%;
+  height: 115vh;
+
+  display: flex;
+  justify-content: space-around;
+ 
+}
+.footer img{
+  object-fit: cover;
+  position: absolute;
+  height:100%;
+  width: 100%;
+
+}
+
+#card{
+  width:300px;
+  position: relative;
+  z-index: 5;
+ top:-85px;
+ transform-style: preserve-3d;
+ transform: translateZ(20px);
+
+}
+.card-outside{
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(100px);
+  height: 480px;
+  width: auto;
+  z-index: 1;
+  width:auto;
+}
+#circle1, #circle2, #circle3{
+  position: absolute;
+  z-index: 1;
+  transform: scale(0.7);
+  top:90px;
+  transform-style: preserve-3d;
+  transform: translate3d(0,0,75px) scale(0.7);
+perspective: 10px;
+pointer-events: none;
+}
+#circle1{
+  left:-15px;
+  top:80px;
+}
+#circle2{
+  left:-50px;
+  z-index: -1;
+  transform: translate3d(0,0,75px) scale(0.7);
+
+}
+#circle3{
+  right: -30px;
+  
+}
+
+
+#buy1, #buy2, #buy3{
+  position: absolute;
+  width:120px ;
+  z-index: 999;
+  top:85%;
+  opacity: 0;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 10%, 0px);
+  perspective: 10px;
+  transition: .5s;
+  cursor: pointer;
+}
+
+#buy1{
+  left:90px;
+
+}
+#buy2{
+left:30%;
+
+}
+#buy3{
+  right:90px;
+}
+
+.card-outside:hover #buy1
+ {
+  opacity: 1;
+  transform: translate3d(0, -55%, 75px);
+}
+.card-outside:hover #buy2{
+  opacity: 1;
+  transform: translate3d(0, -55%, 75px);
+}
+.card-outside:hover #buy3{
+  opacity: 1;
+  transform: translate3d(0, -55%, 75px);
+}
+
+#pink-chair {
+  width:180px;
+  height: auto;
+  position:absolute;
+  z-index: 1;
+  pointer-events: none;
+  transform-style: preserve-3d;
+ transform: translate3d(-230px, 130px, 75px); 
+ transition: .5s;
+}
+
+.card-outside:hover #pink-chair{
+  transform-style: preserve-3d; 
+  transform: translate3d(-230px, 130px,100px); 
+
+}
+#bluepillow{
+  width:250px;
+  height:auto;
+  transform: translate3d(-280px, 190px, 75px);
+}
+.card-outside:hover #bluepillow{
+  transform: translate3d(-280px, 190px, 100px);
+}
+
+#orangechair{
+  width:200px;
+  height:auto;
+  transform: translate3d(-240px, 150px, 75px); 
+  z-index: 1;
+  pointer-events: none;
+  transition: .5s;
+}
+.card-outside:hover #orangechair{
+  transform-style: preserve-3d; 
+  transform: translate3d(-240px, 150px, 100px); 
+
+}
+#name{
+  width:130px;
+  height: auto;
+  z-index: 9999;
+
+  opacity: 0;
+  transition: .5s;
+  transform-style: preserve-3d;
+  transform: translate3d(90px,30px,70px);
+  perspective: 10px;
+}
+
+.card-outside:hover #name{
+transform-style: preserve-3d; 
+  transform: translate3d(90px,60px,100px);
+  opacity: 1;
+}
+
+
+/* note:
+vanilla js 不可使用overflow  */
