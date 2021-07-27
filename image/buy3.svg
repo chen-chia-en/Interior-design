@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="78" viewBox="0 0 240 78">
+  <g id="Group_36" data-name="Group 36" transform="translate(-1391 -557)">
+    <g id="Rectangle_13" data-name="Rectangle 13" transform="translate(1391 557)" fill="#dbb839" stroke="#707070" stroke-width="1">
+      <rect width="240" height="78" rx="39" stroke="none"/>
+      <rect x="0.5" y="0.5" width="239" height="77" rx="38.5" fill="none"/>
+    </g>
+    <text id="Buy_Now" data-name="Buy Now" transform="translate(1415 615)" fill="#fff" font-size="40" font-family="SegoeScript-Bold, Segoe Script" font-weight="700"><tspan x="0" y="0">Buy Now</tspan></text>
+  </g>
+</svg>
